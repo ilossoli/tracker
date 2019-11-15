@@ -67,6 +67,7 @@ overflow: hidden;
 	font-size:30px;
 	text-transform:uppercase;
 	font-family: "Consolas", Courier, monospace;
+	opacity: .2;
 }
 .fire_medallion{
 	vertical-align:top;
@@ -74,6 +75,7 @@ overflow: hidden;
 	font-size:30px;
 	text-transform:uppercase;
 	font-family: "Consolas", Courier, monospace;
+	opacity: .2;
 }
 .water_medallion{
 	vertical-align:top;
@@ -81,6 +83,7 @@ overflow: hidden;
 	font-size:30px;
 	text-transform:uppercase;
 	font-family: "Consolas", Courier, monospace;
+	opacity: .2;
 }
 .shadow_medallion{
 	vertical-align:top;
@@ -88,6 +91,7 @@ overflow: hidden;
 	color: rgb(238, 130, 238);
 	text-transform:uppercase;
 	font-family: "Consolas", Courier, monospace;
+	opacity: .2;
 }
 .spirit_medallion{
 	vertical-align:top;
@@ -95,6 +99,7 @@ overflow: hidden;
 	color: rgb(255, 165, 0);
 	text-transform:uppercase;
 	font-family: "Consolas", Courier, monospace;
+	opacity: .2;
 }
 .generic_medallion{
 	vertical-align:top;
@@ -102,6 +107,7 @@ overflow: hidden;
 	color: black;
 	text-transform:uppercase;
 	font-family: "Consolas", Courier, monospace;
+	opacity: .2;
 }
 .greenstone{
 	vertical-align:top;
@@ -111,7 +117,8 @@ overflow: hidden;
 	color: green;
 	font-style:italic;
 	font-weight:100;
-	opacity:.8;
+	opacity:.2;
+	
 }
 .redstone{
 	vertical-align:top;
@@ -121,7 +128,7 @@ overflow: hidden;
 	color: red;
 	font-style:italic;
 	font-weight:100;
-	opacity:.8;
+	opacity:.2;
 }
 .bluestone{
 	vertical-align:top;
@@ -131,7 +138,7 @@ overflow: hidden;
 	color: blue;
 	font-style:italic;
 	font-weight:100;
-	opacity:.8;
+	opacity:.2;
 }
 .requirements {
 	height:30px;
@@ -177,6 +184,8 @@ overflow: hidden;
 	columns: 5
 }
 .area_titles {
+	display: inline-block;
+	margin-bottom:6px;
 	font-size: 22px;
 	text-align: left;
 	font-weight: 3000;
@@ -189,7 +198,7 @@ overflow: hidden;
 .column {
 	margin-top:10px;
   float: left;
-  width: 6.5%;
+  width: 90px;
 }
 #checkSummaryColumn {
 	margin-top:10px;
@@ -204,22 +213,32 @@ overflow: hidden;
 #info_column {
 	margin-top:10px;
 	float: left;
-	width: 13%;
+	width: 245px;
+}
+#log_area {
+	position: absolute;
+	top:550px;
+	height: 500px;
+	background-color: #aaaaaa;
+	right:350px;
+	width: 425px;
+	float: bottom;
+	
 }
 #songcolumn {
 	margin-top:10px;
 	float: left;
-	width: 8%;
+	width: 140px;
 }
 .dungcolumn {
 	margin-top:10px;
   float: left;
-  width: 7.25%;
+  width: 115px;
 }
 .minidungcolumn {
 	margin-top:10px;
   float: left;
-  width: 6.75%;
+  width: 108px;
 }
 .no_span {
 	
@@ -243,6 +262,19 @@ overflow: hidden;
 	width: 30px;
 	vertical-align: top;
 	margin-bottom: 3px;
+	display: none;
+}
+.force_input {
+	height:22px;
+	width: 30px;
+	vertical-align: top;
+	margin-bottom: 3px;
+}
+.seed_input {
+	height:22px;
+	width: 40px;
+	vertical-align: top;
+	margin-bottom: 3px;
 }
 .layout_input {
 	width: 55px;
@@ -256,6 +288,24 @@ overflow: hidden;
 .logic_check_text{
 	font-size: 16px;
 	color: 						chartreuse;
+	font-weight:bold;
+	display: inline-block;
+	margin-top:2px;
+	margin-bottom:5px;
+	vertical-align: top;
+}
+.logic_hint_text{
+	font-size: 16px;
+	color: 						pink;
+	font-weight:bold;
+	display: inline-block;
+	margin-top:2px;
+	margin-bottom:5px;
+	vertical-align: top;
+}
+.logic_skull_text {
+	font-size: 16px;
+	color: 						gold;
 	font-weight:bold;
 	display: inline-block;
 	margin-top:2px;
@@ -354,6 +404,8 @@ overflow: hidden;
   height: 20px;
   width: 20px;
   margin-left:3px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   vertical-align: center;
   text-align: center;
   font-size:18px;
@@ -393,6 +445,12 @@ overflow: hidden;
   margin-right:3px;
   border-radius: 50%;
   display: inline-block;
+}
+.check_icon{
+	margin-top:3px;
+	margin-right:3px;
+	height:16px;
+	width: 16px;
 }
 .songpics {
 	height:26px;
@@ -529,8 +587,11 @@ display:inline-block;
 margin:1.5%;
 margin-top:0%;
 }
+#checkPedestal{
+	margin-top:3px;
+}
 #markStones {
-	margin-left:59px;
+	margin-left:10px;
 }
 #forceOutOfLogic{
 	color:pink;
