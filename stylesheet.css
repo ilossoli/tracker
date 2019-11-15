@@ -202,8 +202,9 @@ overflow: hidden;
 }
 #checkSummaryColumn {
 	margin-top:10px;
-	float: left;
-	width: 13.5%;
+	right:0px;
+	position:absolute;
+	width: 340px;
 }
 #checkSummaryColumn2 {
 	margin-top:10px;
